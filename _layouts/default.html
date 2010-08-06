@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Twitter4R: {% if page.title %}{{ page.title }}{% endif %}</title>
+    {% if page.meta_keywords %}<meta name="keywords" content="{{ page.meta_keywords }}" />{% endif %}
+    {% if page.meta_description %}<meta name="description" content="{{ page.meta_description }}" />{% endif %}
+    <meta name="author" content="Susan Potter" />
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <link href="/css/twitter4r.css?{{site.time}}" rel="stylesheet" media="screen, projection" type="text/css" />
+    {% if page.code_style %}<link href="/css/{{ page.code_style }}.css?{{site.time}}" rel="stylesheet" media="screen, projection" type="text/css" />{% endif %}
+</head>
+<body {% if page.location %}id="{{ page.location }}"{% endif %}>
+<div class="wrapper">
+    <div class="wrap header">
+        <div class="logo">
+                <a href="http://twitter4r.github.com/">Twitter4R</a>
+        </div>
+        <div id="menu" class="menu">
+        {{ post.type }}
+            <ul>
+                <li class="first about"><a href="/about/">About</a></li>
+                <li class="projects"><a href="/docs/">Documentation</a></li>
+                <li class="blog"><a href="/blog">Blog</a></li>
+                <li class="archives last"><a href="/blog/archives/">Archives</a></li>
+            </ul>
+        </div>
+    </div><!-- ends .header -->
+
+    <div class="content">
+        {{ content }}
+    </div><!-- ends .content -->
+
+    {% include footer.html %}
+</div><!-- ends .wrapper -->
+</body>
+</html>

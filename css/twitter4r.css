@@ -1,0 +1,312 @@
+/* ----------------------------------------------------------------------------
+   Reset CSS 
+   From http://meyerweb.com/eric/tools/css/reset/
+ */
+html, body, div, span, applet, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, em, img, small, strike, strong, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    background:transparent;
+    vertical-align:baseline;
+}
+
+:focus {
+    outline:            0;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+
+/* ----------------------------------------------------------------------------
+   Elements styles
+     base leading: 24px 
+     base font:    20px   1px = .05em
+
+     If compensating font-size for sub-elements (a inside li's for example) use
+     the formula: 1 / font-size-of-parent-element = font-size-for-children
+     if talking about images then just multiply the result by the pixel width 
+     or height.
+ */
+body {
+    font-family: Inconsolata, "Trebuchet MS", verdana, sans-serif;
+    line-height:1.2em;
+    /*background:url(grid.png);*/
+    font-size:125%;
+}
+
+html > body {
+    font-size:20px;
+}
+
+a {
+    color:              #00f;
+    text-decoration:    underline;
+}
+
+a:hover {
+    color:              #1A4DFF;
+}
+
+a:active {
+    color:              #f00;
+}
+
+a:visited {
+    color:              purple;
+}
+
+h1, h2, h3, h4 {
+    font-weight:normal;
+    font-family: Georgia, serif;
+}
+
+p, dd, dt {
+    font-size:          .8em;
+    margin:             0 0 1.5em;
+    line-height:        1.5em;
+}
+
+ol li {
+    list-style-type: decimal;
+    margin-left: 60px;
+}
+
+li {
+    font-size: .8em;
+    line-height: 1.5em;
+    list-style: none;
+}
+
+h1 {
+    font-size:          2.8em;
+    line-height:        1.043em;
+    margin:             1.043em 0 .45em 0;
+}
+
+h1 a {
+    color:              #000;
+    text-decoration:    none;
+}
+
+h1 a:visited {
+    color:              #000;
+}
+
+h1 a:hover {
+    color:              #000;
+}
+
+h2 {
+    font-size:          2em;
+    margin:             .5em 0 .25em;
+    line-height:        1.3em;
+    color: #333;
+}
+
+h2 em {
+    font-size: 75%;
+    line-height:75%;
+    color:#c00;
+}
+
+h3 {
+    font-size:1.2em;
+    margin:1.5em 0 .5em;
+    line-height:1em;
+}
+
+h4 {
+    font-size: 1em;
+    line-height: 1.2em;
+    margin: 1.2em 0;
+    font-weight: bold;
+}
+
+label {
+    cursor:             pointer;
+    display:            block;
+    font-size:          .8em;
+}
+
+
+.wrap {
+    overflow: hidden;
+}
+
+
+
+/* ----------------------------------------------------------------------------
+    Layout
+ */
+
+html {
+    background: #f9f9f9;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 960px;
+    background:#fff;
+}
+
+.header {
+}
+
+.logo {
+    background: #f9f9f9;
+    font-size: 5em;
+    padding: .8em .4em;
+    font-family: Georgia, serif;
+    text-transform: lowercase;
+
+}
+
+.logo a {
+    text-decoration: none;
+    color: #666;
+}
+
+.intro {
+    margin-bottom: 3em;
+}
+
+.menu ul {
+    background:#efefef;
+    width:100%;
+    overflow: hidden;
+}
+
+.menu a {
+    font-size: 1em; 
+    font-family: Georgia, serif;
+    line-height: 1.2em;
+    text-align:center;
+    width: 120px;
+    height: 30px;
+    padding-top: 10px;
+    float: left;
+    display: inline;
+    color: #666;
+    text-decoration: none;
+}
+
+.menu a:hover, 
+.menu .first a:hover,
+#about .about a,
+#projects .projects a,
+#blog .blog a,
+#archives .archives a {
+    background: #c00;
+    color:#fff;
+}
+
+
+.content {
+    margin:1.2em 5em 2.4em;
+}
+
+.post {
+    padding-bottom: 1em;
+    border-bottom: 1px dotted #efefef;
+    margin-bottom: 2.4em;
+}
+
+.terminal {
+    font-size: .6em;
+    background: #000;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------------------------------------------
+    Post styles
+ */
+
+
+/* A list of somethings */
+dl.posts {
+}
+
+dl.posts dt {
+    width:16%;
+    margin-bottom:0;
+}
+
+dl.posts dd em {
+    font-style:normal;
+    display:block;
+}
+
+dl.posts dd em a {
+    color:#fff;
+    padding:0 5px;
+    font-size:10px;
+    text-decoration:none;
+    background:#444;
+}
+
+dl.posts dd {
+    margin-bottom:0;
+}
+
+.date {
+   color:#c00; 
+}
+
+.article .update {
+    margin-left:0;
+    margin-right:0;
+    background:#eee;
+    padding:.75em 1.5em;
+}
+
+
+.project {
+    margin: 3em 0;
+}
+
+/* ----------------------------------------------------------------------------
+    Footer
+ */
+
+.footer {
+    background: #222;
+    padding: .8em 1.2em;
+}
+
+.footer ul {
+}
+
+.footer li {
+    padding: 5px 0;
+    width: auto;
+    color: #fff;
+    font-size: .7em;
+}
+
+.footer a {
+    color: #fff;
+    font-family: Georgia, serif;
+}
+
+/* ----------------------------------------------------------------------------
+    DisQus
+ */
+#disqus_thread {
+}
+
+#dsq-content {
+    font-size: 20px !important;
+}
+

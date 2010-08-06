@@ -1,0 +1,6 @@
+auto: false
+server: true
+server_port: 8000
+lsi: true
+pygments: true
+
